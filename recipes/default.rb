@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 remote_file "/usr/local/bin/lein" do
-  source "http://github.com/technomancy/leiningen/raw/stable/bin/lein"
+  source "http://github.com/technomancy/leiningen/blob/1.x/bin/lein"
   mode "755"
   owner "root"
   group "root"
