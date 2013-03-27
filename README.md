@@ -1,18 +1,18 @@
-= DESCRIPTION:
+# DESCRIPTION:
 
 Installs leiningen from the built image on github (http://github.com/technomancy/leiningen/raw/stable/bin/lein)
 
-= REQUIREMENTS:
+# REQUIREMENTS:
 
 none
 
-= ATTRIBUTES: 
+# ATTRIBUTES: 
 
 none
 
-= USAGE:
+# USAGE:
 
-
+```
    leiningen_project "Deploy Something" do
       action            [:build]
       s3_wagon_private  true
@@ -22,4 +22,4 @@ none
       source_dir        source_dir
       deploy_user       user
     end
-
+```
