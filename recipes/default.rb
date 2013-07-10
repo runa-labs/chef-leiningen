@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 remote_file "/usr/local/bin/lein" do
-  source "http://s3.amazonaws.com/runa-share/lein"
+  source "https://github.com/technomancy/leiningen/blob/5eaad5c48db0668d773e6e964bdb64c30116c370/bin/lein"
   mode "755"
   owner "root"
   group "root"
