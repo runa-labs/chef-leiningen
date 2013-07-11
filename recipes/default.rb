@@ -16,6 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 remote_file "/usr/local/bin/lein" do
   source "https://raw.github.com/technomancy/leiningen/5eaad5c48db0668d773e6e964bdb64c30116c370/bin/lein"
   mode "755"
@@ -24,11 +25,10 @@ remote_file "/usr/local/bin/lein" do
   backup false
 end
 
-execute "lein_self_install" do
-  command "export LEIN_ROOT=1; lein self-install"
+execute "install_leiningen" do
+  command "export HTTP_CLIENT='curl --insecure -f -L -o'; lein version"
   user   node[:lein][:user] 
   group  node[:lein][:group]
   environment ({"HOME" => node[:lein][:home]})
-  not_if{ File.exists?("#{node[:lein][:home]}/.lein/self-installs/leiningen-1.7.1-standalone.jar") }
 end
 
