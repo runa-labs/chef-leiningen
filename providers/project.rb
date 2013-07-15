@@ -28,9 +28,9 @@ action :build do
     user    new_resource.deploy_user
     group   new_resource.deploy_user
     cwd     new_resource.source_dir
-    environment({"HOME" => "/home/#{new_resource.deploy_user}"})
-    environment({"ARCHIVA_USERNAME" => "#{new_resource.s3_username}"})
-    environment({"ARCHIVA_PASSPHRASE" => "#{new_resource.s3_passphrase}"})
+    environment({"HOME" => "/home/#{new_resource.deploy_user}",
+                  "ARCHIVA_USERNAME" => new_resource.s3_username,
+                  "ARCHIVA_PASSPHRASE" => new_resource.s3_passphrase})
     command "lein uberjar"
   end
   
