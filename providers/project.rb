@@ -31,7 +31,7 @@ action :build do
     environment({"HOME" => "/home/#{new_resource.deploy_user}",
                   "ARCHIVA_USERNAME" => new_resource.s3_username,
                   "ARCHIVA_PASSPHRASE" => new_resource.s3_passphrase})
-    command "lein uberjar"
+    command "lein clean; lein uberjar"
   end
   
 end
