@@ -26,9 +26,9 @@ remote_file "/usr/local/bin/lein" do
 end
 
 execute "install_leiningen" do
-  command "export HTTP_CLIENT='curl --insecure -f -L -o'; lein version"
+  command "lein version"
   user   node[:lein][:user] 
   group  node[:lein][:group]
-  environment ({"HOME" => node[:lein][:home]})
+  environment ({"HOME" => node[:lein][:home], "HTTP_CLIENT" => 'curl --insecure -f -L -o'})
 end
 
