@@ -18,7 +18,7 @@
 #
 
 remote_file "/usr/local/bin/lein" do
-  source "https://raw.github.com/technomancy/leiningen/5eaad5c48db0668d773e6e964bdb64c30116c370/bin/lein"
+  source "https://raw.github.com/technomancy/leiningen/stable/bin/lein"
   mode "755"
   owner "root"
   group "root"
