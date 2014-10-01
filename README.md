@@ -1,12 +1,14 @@
 # DESCRIPTION:
 
-Installs leiningen from the built image on github (http://github.com/technomancy/leiningen/raw/stable/bin/lein)
+Installs leiningen from the built image on github: https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+
+Forked from the outdated repo https://github.com/runa-labs/chef-leiningen (see https://github.com/runa-labs/chef-leiningen/pull/3)
 
 # REQUIREMENTS:
 
 none
 
-# ATTRIBUTES: 
+# ATTRIBUTES:
 
 none
 
